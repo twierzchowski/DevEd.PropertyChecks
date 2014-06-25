@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.FsCheck", "FSharp.FsCheck\FSharp.FsCheck.fsproj", "{58888780-F69E-4478-B1DB-B351F72488C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.FsCheck", "CSharp.FsCheck\CSharp.FsCheck.csproj", "{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58888780-F69E-4478-B1DB-B351F72488C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58888780-F69E-4478-B1DB-B351F72488C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58888780-F69E-4478-B1DB-B351F72488C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58888780-F69E-4478-B1DB-B351F72488C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
