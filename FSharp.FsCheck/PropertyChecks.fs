@@ -52,7 +52,7 @@ let ``Insanity check``() =
 
 [<Test>]
 let ``Country code less than 4 digits``() = 
-    let genNumber (DontSize(cc : uint32)) = 
+    let genNumber (DontSize(cc : uint16)) = 
         match ValidPhoneNumber("+" + cc.ToString() + " 1234 123456") with
         | ValidPhoneNumber n -> Assert.IsTrue(n.CountryCode.ToString().Length < 4)
         | InvalidPhoneNumber _ -> ()

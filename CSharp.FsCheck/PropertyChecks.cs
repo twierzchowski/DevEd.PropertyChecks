@@ -68,7 +68,7 @@ namespace CSharp.FsCheck
         public void CountryCodeLessThan4digits()
         {
             Spec.ForAny(
-                (DontSize<uint> country) =>
+                (DontSize<UInt16> country) =>
                 {
                     var cc = country.Item;
                     PhoneNumber ph;
