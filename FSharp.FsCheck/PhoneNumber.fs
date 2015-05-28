@@ -14,7 +14,7 @@ type PhoneNumber =
 // Shadow the name so that no one else
 // can create "ValidPhoneNumber"
 let ValidPhoneNumber input =
-    let reg = Regex(@"\+(?<cc>\d+) (?<ic>\d+) (?<sn>\d+)")
+    let reg = Regex(@"\+(?<cc>\d{1,3}) (?<ic>\d+)\s*(?<sn>\d+)")
     match reg.IsMatch(input) with
     | true ->
         let groups = reg.Match(input).Groups

@@ -21,7 +21,7 @@ namespace CSharp.FsCheck
 
         public static bool TryParse(string number, out PhoneNumber ph)
         {
-            var reg = new Regex(@"\+(?<cc>\d+) (?<ic>\d+) (?<sn>\d+)");
+            var reg = new Regex(@"\+(?<cc>\d{1,3}) (?<ic>\d+)\s*(?<sn>\d+)");
             if (!reg.IsMatch(number))
             {
                 ph = null;

@@ -73,7 +73,7 @@ namespace CSharp.FsCheck
                     var cc = country.Item;
                     PhoneNumber ph;
                     var ec = PhoneNumber.TryParse("+" + cc.ToString() + " 1234 123456", out ph);
-                    return ph.CountryCode < 1000;
+                    return !ec || ph.CountryCode < 1000;
                 })
                 .QuickCheckThrowOnFailure();
         }

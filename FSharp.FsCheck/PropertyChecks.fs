@@ -59,6 +59,30 @@ let ``Country code less than 4 digits``() =
     Check.QuickThrowOnFailure genNumber
 
 [<Test>]
+let ``Identification code less than 5 digits``() = 
+    let genNumber (DontSize(cc : uint16)) = 
+        match ValidPhoneNumber("+48 " + cc.ToString() + " 123456") with
+        | ValidPhoneNumber n -> Assert.IsTrue(n.CountryCode.ToString().Length < 5)
+        | InvalidPhoneNumber _ -> ()
+    Check.QuickThrowOnFailure genNumber
+
+[<Test>]
+let ``Subscription number between 1 and (15 – country code – identification code) digits``() = 
+    let genNumber (DontSize(cc : uint16)) = 
+        match ValidPhoneNumber("+48 " + cc.ToString() + " 123456") with
+        | ValidPhoneNumber n -> Assert.IsTrue(n.SubscriberNumber.ToString().Length <= 15 - n.CountryCode.ToString().Length - n.IdentificationCode.ToString().Length)
+        | InvalidPhoneNumber _ -> ()
+    Check.QuickThrowOnFailure genNumber
+
+
+[<Test>]
+let ``Less than 15 total digits``() =
+    Arb.register<PhoneNumberGenerators> () |> ignore
+    Check.QuickThrowOnFailure (
+        fun (v:GeneratedValidNumber) ->
+            v.InputString.Replace(" ", "").Replace("+","").ToString().Length <=15 )
+
+[<Test>]
 let ``Valid numbers are counted as valid`` () =
     Arb.register<PhoneNumberGenerators> () |> ignore
     Check.VerboseThrowOnFailure (

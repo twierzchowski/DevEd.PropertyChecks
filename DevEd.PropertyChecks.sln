@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.FsCheck", "FSharp.FsCheck\FSharp.FsCheck.fsproj", "{58888780-F69E-4478-B1DB-B351F72488C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.FsCheck", "CSharp.FsCheck\CSharp.FsCheck.csproj", "{0DB6C98E-FCEA-4871-8E81-8B4CB53F99E7}"
